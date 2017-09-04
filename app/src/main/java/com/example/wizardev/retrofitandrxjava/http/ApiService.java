@@ -11,10 +11,13 @@ import retrofit2.http.Url;
  * author : wizardev
  * e-mail : wizarddev@163.com
  * time   : 2017/08/18
- * desc   :
+ * desc   : Retrofit网络请求的接口
  * version: 1.0
  */
 public interface ApiService {
-    @POST
-    Observable<BaseResponse<String>> executePost(@Url String url, @Body Map<String,String> maps);
+
+    String BASE_URL = "http://192.168.0.133:8080/";
+
+      @POST
+      Observable<String> executePost(@Url String url, @Body Map<String,String> maps);
 }
